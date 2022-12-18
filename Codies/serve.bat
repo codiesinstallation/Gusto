@@ -1,2 +1,2 @@
-start chrome http://localhost:8080
-cd .. && php artisan serve  --port=8080
+start chrome http://localhost:2000
+cd .. && php artisan serve  --port=2000
