@@ -1,0 +1,73 @@
+#allReport .card {
+    width: 100%;
+}
+
+a.active,
+.btn.active .btn-primary,
+.btn-info,
+.btn-outline-primary:hover,
+a.text-dark:focus,
+a.text-dark:hover {
+    background: #3d9970 !important;
+    color: #fff !important;
+}
+
+.dataTables_filter {
+    float: right;
+    display: none;
+}
+
+.buttons-excel,
+.buttons-print {
+    background: #3d9970;
+    margin: 5px;
+}
+
+.buttons-print {
+    background: rgb(0, 70, 128);
+    margin: 5px;
+}
+
+.pagination.justify-content-center {
+    margin: auto;
+    margin-top: 5px;
+}
+
+.file-input {
+    margin: auto;
+}
+
+.pagination.justify-content-center li {
+    margin: 3px;
+}
+
+.fa-trash:before {
+    color: white;
+}
+
+.loadPage {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("./../../backend/img/load.gif") 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+.box {
+    width: 45%;
+    background: rgba(226, 226, 226, 1);
+    background: -moz-linear-gradient( left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 10%, rgba(209, 209, 209, 1) 98%, rgba(254, 254, 254, 1) 100%);
+    background: -webkit-gradient( left top, right top, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(10%, rgba(219, 219, 219, 1)), color-stop(98%, rgba(209, 209, 209, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
+    background: -webkit-linear-gradient( left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 10%, rgba(209, 209, 209, 1) 98%, rgba(254, 254, 254, 1) 100%);
+    background: -o-linear-gradient( left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 10%, rgba(209, 209, 209, 1) 98%, rgba(254, 254, 254, 1) 100%);
+    background: -ms-linear-gradient( left, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 10%, rgba(209, 209, 209, 1) 98%, rgba(254, 254, 254, 1) 100%);
+    background: linear-gradient( to right, rgba(226, 226, 226, 1) 0%, rgba(219, 219, 219, 1) 10%, rgba(209, 209, 209, 1) 98%, rgba(254, 254, 254, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
+}
+
+.outer-box {
+    margin-top: 60px;
+    margin-left: 450px;
+}
