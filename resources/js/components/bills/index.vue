@@ -7,11 +7,14 @@
                     <div
                         class="card-header hideMeInPrint d-flex flex-row align-items-center justify-content-between hideMeInPrint"
                     >
-
                         <h1 class="text-center my-0 btn-sm d-block">
                             الفواتير
                         </h1>
-
+                        <i
+                            class="fas fa-file-excel text-success"
+                            style="cursor: pointer"
+                            onclick="download('xlsx','bills');"
+                        ></i>
                         <h6
                             class="m-0 font-weight-bold text-primary float-left"
                         >
@@ -177,6 +180,12 @@
                                         >
                                             {{ __("Pay") }}
                                         </th>
+                                        <th
+                                            v-show="$root.$data.codies.country === 1"
+                                            style="width: 10%"
+                                        >
+                                            {{ __("Action") }}
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -213,7 +222,8 @@
                                                     : ''
                                             "
                                         >
-                                           ({{ bill.vat }}) {{ bill.bill_vat_val }}
+                                            ({{ bill.vat }})
+                                            {{ bill.bill_vat_val }}
                                         </td>
                                         <td
                                             :class="
@@ -306,7 +316,9 @@
                                             }}
                                         </td>
 
-                                        <td :title="bill.bill_notes " style="max-width: 100px"
+                                        <td
+                                            :title="bill.bill_notes"
+                                            style="max-width: 100px"
                                             :class="
                                                 selected === bill.bill_no
                                                     ? 'selected'
@@ -332,6 +344,25 @@
                                                 ></i>
                                             </a>
                                         </td>
+                                         <td
+                                            v-show="$root.$data.codies.country === 1"
+                                            :class="
+                                                selected === bill.bill_no
+                                                    ? 'hideMeInPrint selected'
+                                                    : 'hideMeInPrint'
+                                            "
+                                        >
+                                            <a
+                                                class="btn btn-sm btn-danger"
+                                                @click="
+                                                    deleteAction(bill.bill_no)
+                                                "
+                                            >
+                                                <i
+                                                    class="fa fa-trash text-danger"
+                                                ></i>
+                                            </a>
+                                        </td>
                                         <td v-show="user.pay_bill">
                                             <button
                                                 v-show="
@@ -345,6 +376,7 @@
                                                 {{ __("Pay") }}
                                             </button>
                                         </td>
+
                                     </tr>
                                 </tbody>
                             </table>
@@ -451,7 +483,13 @@
                                 </td>
                                 <td class="col-1">{{ type.type_count }}</td>
                                 <td class="col-1">{{ type.type_price }}</td>
-                                <td class="col-1">{{ type.units?type.units.unit.unit_ar_name:'-' }}</td>
+                                <td class="col-1">
+                                    {{
+                                        type.units
+                                            ? type.units.unit.unit_ar_name
+                                            : "-"
+                                    }}
+                                </td>
                                 <td class="col-1">
                                     {{ type.type_total_price }}
                                 </td>
@@ -707,7 +745,6 @@
 </template>
 
 <script>
-
 import Printer from "../printer";
 import Spinner from "../spinner/mixinsSpinner";
 import Security from "../spinner/security";
@@ -869,6 +906,19 @@ export default {
         },
         showBillDetails(bill) {
             this.billTypes = bill;
+        },
+        deleteAction(id) {
+            axios
+                .delete("/api/bills/" + id)
+                .then(() => {
+                    this.bills = this.bills.filter((bill) => {
+                        return bill.bill_no != id;
+                    });
+                    Notification.successMsg("تم الحذف بنجاح");
+                })
+                .catch(() => {
+                    Notification.errorMsg("حدث خطأ ما");
+                });
         },
     },
 };

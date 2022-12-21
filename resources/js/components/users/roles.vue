@@ -1,7 +1,7 @@
 <template>
     <div dir="rtl" v-if="userRole.user_roles || userRole.is_admin">
         <div class="card border-1">
-            <form @keydown.enter.prevent @submit.prevent="update">
+            <form @submit.prevent="update">
                 <div class="card-header">
                     <div class="controls text-center">
                         <h1 class="my-3">اختيار الصلاحيات</h1>
@@ -282,6 +282,54 @@
                                         </ul>
                                     </li>
 
+                                    <li
+                                        :class="
+                                            userRoles ? 'has isShow' : 'has'
+                                        "
+                                        @click="userRoles = !userRoles"
+                                    >
+                                        <i
+                                            :class="
+                                                userRoles
+                                                    ? 'fa fa-minus'
+                                                    : 'fa fa-plus'
+                                            "
+                                        ></i>
+                                        <label>شاشة البيع</label>
+                                        <ul>
+
+                                            <li class="">
+                                                <input
+                                                    id="change_type_in_kitchen"
+                                                    type="checkbox"
+                                                    v-model="user.change_type_in_kitchen"
+                                                />
+                                                <label for="change_type_in_kitchen"
+                                                    >تغير عدد الأصناف في المطبخ</label
+                                                >
+                                            </li>
+                                            <li class="">
+                                                <input
+                                                    id="resend"
+                                                    type="checkbox"
+                                                    v-model="user.resend"
+                                                />
+                                                <label for="resend"
+                                                    >إعادة الإرسال للمطبخ</label
+                                                >
+                                            </li>
+                                            <li class="">
+                                                <input
+                                                    id="delete_reserved_type"
+                                                    type="checkbox"
+                                                    v-model="user.delete_reserved_type"
+                                                />
+                                                <label for="delete_reserved_type"
+                                                    >حذف الصنف المرسل الى المطبخ</label
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li class="single">
                                         <input
                                             id="reprint_bill"
@@ -292,6 +340,17 @@
                                             >اعادة طباعة الفاتورة
                                         </label>
                                     </li>
+                                    <li class="single">
+                                        <input
+                                            id="reprint_bill"
+                                            type="checkbox"
+                                            v-model="user.delete_bill"
+                                        />
+                                        <label for="reprint_bill"
+                                            >حذف الفاتورة
+                                        </label>
+                                    </li>
+
                                     <li class="single">
                                         <input
                                             id="shift"
@@ -923,6 +982,10 @@ export default {
             this.user.edit_supplier = true;
             this.user.delete_supplier = true;
             this.user.settings = true;
+            this.user.change_type_in_kitchen = true;
+            this.user.resend = true;
+            this.user.delete_reserved_type = true;
+            this.user.delete_bill = true;
         },
         removelAllRoles() {
             this.selectAll = true;
@@ -986,6 +1049,10 @@ export default {
             this.user.edit_supplier = false;
             this.user.delete_supplier = false;
             this.user.settings = false;
+            this.user.change_type_in_kitchen = false;
+            this.user.resend = false;
+            this.user.delete_reserved_type = false;
+            this.user.delete_bill = false;
         },
     },
 };
