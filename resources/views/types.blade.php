@@ -9,20 +9,20 @@
                     <div class="col-md-2">
                         <div class="form-group row">
                             <label class="col-sm-4 col-form-label"
-                                for="from">{{ __(App::getLocale() . '.From') }}</label>
+                                for="from">{{ __('lang.From') }}</label>
                             <div class="col-sm-8">
                                 <input class="form-control " type="date" name="from" id="from"
-                                    placeholder="{{ __(App::getLocale() . '.From') }}" value="{{ request('from') }}">
+                                    placeholder="{{ __('lang.From') }}" value="{{ request('from') }}">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="form-group row">
-                            <label class="col-sm-4 col-form-label" for="to">{{ __(App::getLocale() . '.To') }}</label>
+                            <label class="col-sm-4 col-form-label" for="to">{{ __('lang.To') }}</label>
                             <div class="col-sm-8">
                                 <input class="form-control " type="date" name="to" id="to"
-                                    placeholder="{{ __(App::getLocale() . '.To') }}" value="{{ request('to') }}">
+                                    placeholder="{{ __('lang.To') }}" value="{{ request('to') }}">
                             </div>
                         </div>
                     </div>
@@ -45,11 +45,11 @@
                         <div class="input-group">
                             <select class="form-control " name="period">
                                 <option value="daily"@if (request('period') == 'daily') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Daily') }} </option>
+                                    {{ __('lang.Daily') }} </option>
                                 <option value="monthly" @if (request('period') == 'monthly') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Monthly') }}</option>
+                                    {{ __('lang.Monthly') }}</option>
                                 <option value="period" @if (request('period') == 'period') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Period') }}</option>
+                                    {{ __('lang.Period') }}</option>
                             </select>
 
                         </div>
@@ -57,7 +57,7 @@
                     <div class="col-md-2">
                         <div class="form-group row">
                             <label class="col-sm-6 col-form-label"
-                                for="type_id">{{ __(App::getLocale() . '.Code') }}</label>
+                                for="type_id">{{ __('lang.Code') }}</label>
                             <div class="col-sm-6">
                                 <input class="form-control " type="text" name="type_id" id="type_id"
                                     value="{{ request('type_id') }}">
@@ -67,7 +67,7 @@
 
                     <div class="col-md-1">
                         <button class="btn btn-success" type="submit">
-                            {{ __(App::getLocale() . '.View') }}
+                            {{ __('lang.View') }}
                         </button>
                     </div>
                 </div>

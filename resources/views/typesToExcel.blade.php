@@ -1,10 +1,8 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="card col-12" style="overflow-x: scroll">
-        <div class="card-header">
+    <div class="card">
 
-        </div>
 
         <div class="body">
 

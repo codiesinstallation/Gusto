@@ -11,27 +11,27 @@
                     <div class="col-md-2">
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label"
-                                for="from">{{ __(App::getLocale() . '.From') }}</label>
+                                for="from">{{ __('lang.From') }}</label>
                             <div class="col-sm-10">
                                 <input class="form-control " type="date" name="from" id="from"
-                                    placeholder="{{ __(App::getLocale() . '.From') }}" value="{{ request('from') }}">
+                                    placeholder="{{ __('lang.From') }}" value="{{ request('from') }}">
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" for="to">{{ __(App::getLocale() . '.To') }}</label>
+                            <label class="col-sm-2 col-form-label" for="to">{{ __('lang.To') }}</label>
                             <div class="col-sm-10">
                                 <input class="form-control " type="date" name="to" id="to"
-                                    placeholder="{{ __(App::getLocale() . '.To') }}" value="{{ request('to') }}">
+                                    placeholder="{{ __('lang.To') }}" value="{{ request('to') }}">
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="input-group">
                             <select class="form-control-sm " name="cust_id">
-                                <option value="">{{ __(App::getLocale() . '.All Customers') }}</option>
+                                <option value="">{{ __('lang.All Customers') }}</option>
                                 @foreach ($customers as $customer)
                                     <option value="{{ $customer->cust_id }}"
                                         @if (request('cust_id') == $customer->cust_id) selected="selected" @endif>
@@ -45,11 +45,11 @@
                         <div class="input-group">
                             <select class="form-control " name="period">
                                 <option value="daily"@if (request('period') == 'daily') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Daily') }} </option>
+                                    {{ __('lang.Daily') }} </option>
                                 <option value="monthly" @if (request('period') == 'monthly') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Monthly') }}</option>
+                                    {{ __('lang.Monthly') }}</option>
                                 <option value="period" @if (request('period') == 'period') selected="selected" @endif>
-                                    {{ __(App::getLocale() . '.Period') }}</option>
+                                    {{ __('lang.Period') }}</option>
                             </select>
 
                         </div>
@@ -57,7 +57,7 @@
                     <div class="col-md-2">
                         <div class="input-group">
                             <select class="form-control-sm " name="user_id">
-                                <option value="">{{ __(App::getLocale() . '.All Users') }}</option>
+                                <option value="">{{ __('lang.All Users') }}</option>
                                 @foreach ($users as $user)
                                     <option value="{{ $user->id }}"
                                         @if (request('user_id') == $user->id) selected="selected" @endif>
@@ -71,7 +71,7 @@
                     <div class="col-md-1">
                         <div class="input-group">
                             <select class="form-control-sm " name="pay">
-                                <option value="">{{ __(App::getLocale() . '.All Bills') }}</option>
+                                <option value="">{{ __('lang.All Bills') }}</option>
                                 @foreach ($pays as $pay)
                                     <option value="{{ $pay->id }}"
                                         @if (request('pay') == $pay->id) selected="selected" @endif>
@@ -84,7 +84,7 @@
 
                     <div class="col-md-1">
                         <button class="btn btn-success" type="submit">
-                            {{ __(App::getLocale() . '.View') }}
+                            {{ __('lang.View') }}
                         </button>
                     </div>
                 </div>
@@ -137,11 +137,11 @@
                 footer.classList.add('text-center');
                 var row = footer.insertRow(0);
                 footer.innerHTML =
-                    `<tr> <th <th colspan='4'> {{ __(App::getLocale() . '.Total Of Bills Without Vat') }}</th> <th colspan='4'> ` +
+                    `<tr> <th <th colspan='4'> {{ __('lang.Total Of Bills Without Vat') }}</th> <th colspan='4'> ` +
                     {!! json_encode(round($sum ?? '', 2)) !!} +
-                    ` </th> </tr><tr> <th <th colspan='4'> {{ __(App::getLocale() . '.Total Of Vat') }}</th> <th <th colspan='4'>` +
+                    ` </th> </tr><tr> <th <th colspan='4'> {{ __('lang.Total Of Vat') }}</th> <th <th colspan='4'>` +
                     {!! json_encode(round($vat ?? '', 2)) !!} +
-                    ` </tr><tr></th> <th <th colspan='4'> {{ __(App::getLocale() . '.Total Of Bills With Vat') }}</th> <th <th colspan='4'>` +
+                    ` </tr><tr></th> <th <th colspan='4'> {{ __('lang.Total Of Bills With Vat') }}</th> <th <th colspan='4'>` +
                     {!! json_encode(round($bill_total ?? '', 2)) !!} +
                     ` </th> </tr>`;
 
