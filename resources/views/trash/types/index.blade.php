@@ -22,11 +22,12 @@
                         <td>
                             <a class="btn btn-danger" href="{{ route('restore') }}"
                                 onclick="event.preventDefault();
-                                                     document.getElementById('restore-form').submit();">
+                                                     document.getElementById('restore_{{ $type->type_id }}').submit();">
                                 {{ __('lang.Reset') }}
                             </a>
 
-                            <form id="restore-form" action="{{ route('restore') }}" method="POST" class="d-none">
+                            <form id="restore_{{ $type->type_id }}" action="{{ route('restore') }}" method="POST"
+                                class="d-none">
                                 <input type="hidden" name="type_id" value="{{ $type->type_id }}" />
                                 @csrf
                             </form>

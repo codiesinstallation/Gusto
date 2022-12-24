@@ -25,11 +25,11 @@
                         <td>
                             <a class="btn btn-danger" href="{{ route('restore.bill') }}"
                                 onclick="event.preventDefault();
-                                                     document.getElementById('restore-form').submit();">
+                                                     document.getElementById('restore_{{ $bill->bill_no }}').submit();">
                                 {{ __('lang.Reset') }}
                             </a>
 
-                            <form id="restore-form" action="{{ route('restore.bill') }}" method="POST" class="d-none">
+                            <form id="restore_{{ $bill->bill_no }}" action="{{ route('restore.bill') }}" method="POST" class="d-none">
                                 <input bill="hidden" name="bill_no" value="{{ $bill->bill_no }}" />
                                 @csrf
                             </form>
