@@ -10,7 +10,7 @@
                 class="fa fa-whatsapp  mr-1"></i>
             +201009199086 </a></span>
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 1.0.4
+        <b>Version</b> 1.0.6
 
 
 </footer>

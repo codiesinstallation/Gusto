@@ -258,7 +258,13 @@
                                     />
                                 </td>
                                 <td style="width: 10%">
+                                    <i
+                                        v-if="disable"
+                                        class="btn btn-outline-success font-weight-bold text-dark fa fa-spinner"
+                                    ></i>
+
                                     <button
+                                        v-else
                                         id="save"
                                         :disabled="cart.length <= 0 || disable"
                                         class="btn btn-outline-success font-weight-bold text-dark"
