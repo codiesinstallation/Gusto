@@ -70,18 +70,20 @@
                                         :class="
                                             typeRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="typeRoles = !typeRoles"
                                     >
                                         <i
+                                            @click="typeRoles = !typeRoles"
                                             :class="
                                                 typeRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
                                         ></i>
-                                        <label>الأصناف </label>
+                                        <label @click="typeRoles = !typeRoles"
+                                            >الأصناف
+                                        </label>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="types"
                                                     type="checkbox"
@@ -91,7 +93,7 @@
                                                     >الأصناف
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_type"
                                                     type="checkbox"
@@ -101,7 +103,7 @@
                                                     >اضافة أصناف</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_type"
                                                     type="checkbox"
@@ -111,7 +113,7 @@
                                                     >تعديل الأصناف</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_type"
                                                     type="checkbox"
@@ -121,7 +123,7 @@
                                                     >حذف الأصناف</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="type_discount"
                                                     type="checkbox"
@@ -131,7 +133,7 @@
                                                     خصم على الصنف</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="stock"
                                                     type="checkbox"
@@ -147,10 +149,17 @@
                                         :class="
                                             customerRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="customerRoles = !customerRoles"
                                     >
-                                        <label>العملاء </label>
+                                        <label
+                                            @click="
+                                                customerRoles = !customerRoles
+                                            "
+                                            >العملاء
+                                        </label>
                                         <i
+                                            @click="
+                                                customerRoles = !customerRoles
+                                            "
                                             :class="
                                                 customerRoles
                                                     ? 'fa fa-minus'
@@ -158,7 +167,7 @@
                                             "
                                         ></i>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="customers"
                                                     type="checkbox"
@@ -168,7 +177,7 @@
                                                     >العملاء
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_customer"
                                                     type="checkbox"
@@ -180,7 +189,7 @@
                                                     >اضافة عميل</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_customer"
                                                     type="checkbox"
@@ -190,7 +199,7 @@
                                                     >تعديل عميل</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_customer"
                                                     type="checkbox"
@@ -202,7 +211,7 @@
                                                     >حذف عميل</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="customer_pay"
                                                     type="checkbox"
@@ -218,18 +227,20 @@
                                         :class="
                                             userRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="userRoles = !userRoles"
                                     >
                                         <i
+                                            @click="userRoles = !userRoles"
                                             :class="
                                                 userRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
                                         ></i>
-                                        <label>المستخدمون</label>
+                                        <label @click="userRoles = !userRoles"
+                                            >المستخدمون</label
+                                        >
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="users"
                                                     type="checkbox"
@@ -239,7 +250,7 @@
                                                     >المستخدمون</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_user"
                                                     type="checkbox"
@@ -249,7 +260,7 @@
                                                     >اضافة مستخدم</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_user"
                                                     type="checkbox"
@@ -259,7 +270,7 @@
                                                     >تعديل مستخدم</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_user"
                                                     type="checkbox"
@@ -269,7 +280,7 @@
                                                     >حذف مستخدم</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="user_roles"
                                                     type="checkbox"
@@ -284,31 +295,36 @@
 
                                     <li
                                         :class="
-                                            userRoles ? 'has isShow' : 'has'
+                                            billScreen ? 'has isShow' : 'has'
                                         "
-                                        @click="userRoles = !userRoles"
                                     >
                                         <i
+                                            @click="billScreen = !billScreen"
                                             :class="
-                                                userRoles
+                                                billScreen
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
                                         ></i>
-                                        <label>شاشة البيع</label>
+                                        <label @click="billScreen = !billScreen"
+                                            >شاشة البيع</label
+                                        >
                                         <ul>
-
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="change_type_in_kitchen"
                                                     type="checkbox"
-                                                    v-model="user.change_type_in_kitchen"
+                                                    v-model="
+                                                        user.change_type_in_kitchen
+                                                    "
                                                 />
-                                                <label for="change_type_in_kitchen"
-                                                    >تغير عدد الأصناف في المطبخ</label
+                                                <label
+                                                    for="change_type_in_kitchen"
+                                                    >تغير عدد الأصناف في
+                                                    المطبخ</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="resend"
                                                     type="checkbox"
@@ -318,14 +334,18 @@
                                                     >إعادة الإرسال للمطبخ</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_reserved_type"
                                                     type="checkbox"
-                                                    v-model="user.delete_reserved_type"
+                                                    v-model="
+                                                        user.delete_reserved_type
+                                                    "
                                                 />
-                                                <label for="delete_reserved_type"
-                                                    >حذف الصنف المرسل الى المطبخ</label
+                                                <label
+                                                    for="delete_reserved_type"
+                                                    >حذف الصنف المرسل الى
+                                                    المطبخ</label
                                                 >
                                             </li>
                                         </ul>
@@ -379,16 +399,19 @@
                                         :class="
                                             reportRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="reportRoles = !reportRoles"
                                     >
                                         <i
+                                            @click="reportRoles = !reportRoles"
                                             :class="
                                                 reportRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
                                         ></i>
-                                        <label>التقارير</label>
+                                        <label
+                                            @click="reportRoles = !reportRoles"
+                                            >التقارير</label
+                                        >
                                         <ul>
                                             <li>
                                                 <input
@@ -401,7 +424,7 @@
                                                 >
                                             </li>
 
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="daily_report"
                                                     type="checkbox"
@@ -411,7 +434,7 @@
                                                     >تقرير اليوم</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="monthly_report"
                                                     type="checkbox"
@@ -423,7 +446,7 @@
                                                     >تقرير الشهر</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="period_report"
                                                     type="checkbox"
@@ -433,7 +456,7 @@
                                                     >تقرير الفترة</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="bills_report"
                                                     type="checkbox"
@@ -443,7 +466,7 @@
                                                     >تقرير المبيعات</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="puraches_bill_report"
                                                     type="checkbox"
@@ -456,7 +479,7 @@
                                                     >تقرير فواتير الشراء</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="expenses_reports"
                                                     type="checkbox"
@@ -468,7 +491,7 @@
                                                     >تقرير المصروفات
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="process_bill_report"
                                                     type="checkbox"
@@ -480,7 +503,7 @@
                                                     >تقرير فواتير المعالجة
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="shift_report"
                                                     type="checkbox"
@@ -490,7 +513,7 @@
                                                     >تقرير الوردية
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="customer_pay_report"
                                                     type="checkbox"
@@ -509,19 +532,25 @@
                                         :class="
                                             supplierRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="supplierRoles = !supplierRoles"
                                     >
-                                        <label>الموردون </label>
+                                        <label
+                                            @click="
+                                                supplierRoles = !supplierRoles
+                                            "
+                                            >الموردون
+                                        </label>
                                         <i
+                                            @click="
+                                                supplierRoles = !supplierRoles
+                                            "
                                             :class="
                                                 supplierRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
-                                            class=""
                                         ></i>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="suppliers"
                                                     type="checkbox"
@@ -531,7 +560,7 @@
                                                     >الموردون
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_supplier"
                                                     type="checkbox"
@@ -543,7 +572,7 @@
                                                     >اضافة مورد</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_supplier"
                                                     type="checkbox"
@@ -553,7 +582,7 @@
                                                     >تعديل مورد</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_supplier"
                                                     type="checkbox"
@@ -571,19 +600,20 @@
                                         :class="
                                             unitRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="unitRoles = !unitRoles"
                                     >
-                                        <label>الوحدات </label>
+                                        <label @click="unitRoles = !unitRoles"
+                                            >الوحدات
+                                        </label>
                                         <i
+                                            @click="unitRoles = !unitRoles"
                                             :class="
                                                 unitRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
-                                            class=""
                                         ></i>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="units"
                                                     type="checkbox"
@@ -593,7 +623,7 @@
                                                     >الوحدات
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_unit"
                                                     type="checkbox"
@@ -603,7 +633,7 @@
                                                     >اضافة وحدة</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_unit"
                                                     type="checkbox"
@@ -613,7 +643,7 @@
                                                     >تعديل وحدة</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_unit"
                                                     type="checkbox"
@@ -629,19 +659,20 @@
                                         :class="
                                             offerRoles ? 'has isShow' : 'has'
                                         "
-                                        @click="offerRoles = !offerRoles"
                                     >
-                                        <label>العروض </label>
+                                        <label @click="offerRoles = !offerRoles"
+                                            >العروض
+                                        </label>
                                         <i
+                                            @click="offerRoles = !offerRoles"
                                             :class="
                                                 offerRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
-                                            class=""
                                         ></i>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="offers"
                                                     type="checkbox"
@@ -651,7 +682,7 @@
                                                     >العروض
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_offer"
                                                     type="checkbox"
@@ -661,7 +692,7 @@
                                                     >اضافة عرض</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_offer"
                                                     type="checkbox"
@@ -671,7 +702,7 @@
                                                     >تعديل عرض</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_offer"
                                                     type="checkbox"
@@ -689,21 +720,25 @@
                                                 ? 'has isShow'
                                                 : 'has'
                                         "
-                                        @click="
-                                            main_typeRoles = !main_typeRoles
-                                        "
                                     >
-                                        <label>الاصناف الرئيسية </label>
+                                        <label
+                                            @click="
+                                                main_typeRoles = !main_typeRoles
+                                            "
+                                            >الاصناف الرئيسية
+                                        </label>
                                         <i
+                                            @click="
+                                                main_typeRoles = !main_typeRoles
+                                            "
                                             :class="
                                                 main_typeRoles
                                                     ? 'fa fa-minus'
                                                     : 'fa fa-plus'
                                             "
-                                            class=""
                                         ></i>
                                         <ul>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="main_types"
                                                     type="checkbox"
@@ -713,7 +748,7 @@
                                                     >الاصناف الرئيسية
                                                 </label>
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="create_main_type"
                                                     type="checkbox"
@@ -725,7 +760,7 @@
                                                     >اضافة صنف رئيسي</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="edit_main_type"
                                                     type="checkbox"
@@ -737,7 +772,7 @@
                                                     >تعديل صنف رئيسي</label
                                                 >
                                             </li>
-                                            <li class="">
+                                            <li>
                                                 <input
                                                     id="delete_main_type"
                                                     type="checkbox"
@@ -876,6 +911,7 @@ export default {
             billRoles: false,
             customerRoles: false,
             userRoles: false,
+            billScreen: false,
             reportRoles: false,
             supplierRoles: false,
             unitRoles: false,
@@ -891,6 +927,8 @@ export default {
             this.billRoles = true;
             this.customerRoles = true;
             this.userRoles = true;
+            this.billScreen = true;
+
             this.reportRoles = true;
             this.supplierRoles = true;
             this.unitRoles = true;
@@ -903,6 +941,8 @@ export default {
             this.billRoles = false;
             this.customerRoles = false;
             this.userRoles = false;
+            this.billScreen = false;
+
             this.reportRoles = false;
             this.supplierRoles = false;
             this.unitRoles = false;

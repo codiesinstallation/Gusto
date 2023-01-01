@@ -92,7 +92,10 @@ export default {
                     this.$router.push({ name: "stocks" });
                     Notification.success();
                 })
-                .catch((error) => (this.errors = error.response.data.errors))
+                .catch((error) => {
+                    console.log(error);
+                    this.errors = error.response.data.errors;
+                })
                 .then((e) => {
                     if (this.errors.title)
                         Notification.customMsg(
