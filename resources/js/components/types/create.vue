@@ -550,6 +550,25 @@ export default {
                 Number(selected.deff_price);
         },
         createType() {
+            if (this.selected_units <= 0) {
+                Notification.customMsg(
+                    "error",
+                    "topRight",
+                    "يجب اختيار وحدة واحدة على الأقل"
+                );
+                return;
+            }
+            if (this.type.sell_unit == null) {
+                Notification.customMsg(
+                    "error",
+                    "topRight",
+                    "يجب اختيار وحدة بيع "
+                );
+                return;
+            }
+            this.createTypeWithValidData();
+        },
+        createTypeWithValidData() {
             if (this.selected_units.length > 0) {
                 this.type.type_unit = this.selected_units;
             }
