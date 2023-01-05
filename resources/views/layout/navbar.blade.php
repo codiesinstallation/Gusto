@@ -9,26 +9,26 @@
             </li>
         @endif
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/home"
+            <router-link to="/home"
                 :class="$route.path === '/home' ?
                     'nav-link  active' :
                     'nav-link '">
-                {{ trans('lang.Home') }}</a>
+                {{ trans('lang.Home') }}</router-link>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/bill"
+            <router-link to="/bill"
                 :class="$route.path === '/bill' ?
                     'nav-link  active' :
                     'nav-link '">
-                {{ trans('lang.New Bill') }}</a>
+                {{ trans('lang.New Bill') }}</router-link>
         </li>
         <li class="nav-item">
-            <a href="/process"
+            <router-link to="/process"
                 :class="$route.path === '/return' ?
                     'nav-link  active' :
                     'nav-link '">
                 <p>{{ trans('lang.Manage Exit bill') }}</p>
-            </a>
+            </router-link>
         </li>
         <li class="nav-item dropdown top-dbdn">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -38,31 +38,31 @@
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 
-                <a href="/bills/report/daily"
+                <router-link to="/bills/report/daily"
                     :class="$route.path === '/bills/report/daily' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Today Report') }}</p>
-                </a>
+                </router-link>
 
 
-                <a href="/bills/report/monthly"
+                <router-link to="/bills/report/monthly"
                     :class="$route.path === '/bills/report/monthly' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Monthly Report') }}</p>
-                </a>
+                </router-link>
 
 
-                <a href="/bills/report"
+                <router-link to="/bills/report"
                     :class="$route.path === '/bills/report' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Period Report') }}</p>
-                </a>
+                </router-link>
 
 
                 <a href="/Fbills"
@@ -85,65 +85,65 @@
 
 
                 @if ($codies->country === 2)
-                    <a href="/ProcessReport"
+                    <router-link to="/ProcessReport"
                         :class="$route.path === '/ProcessReport' ?
                             'dropdown-item  active' :
                             'dropdown-item '">
 
                         <p>{{ trans('lang.Process Bills Report') }}</p>
-                    </a>
+                    </router-link>
                 @endif
 
-                <a href="/customers/report"
+                <router-link to="/customers/report"
                     :class="$route.path === '/customers/report' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Customers Report') }}</p>
-                </a>
+                </router-link>
 
 
-                <a href="/search"
+                <router-link to="/search"
                     :class="$route.path === '/search' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Search Report') }}</p>
-                </a>
+                </router-link>
 
 
 
 
 
-                <a href="/shiftReport"
+                <router-link to="/shiftReport"
                     :class="$route.path === '/shiftReport' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Shift Report') }}</p>
-                </a>
+                </router-link>
 
-                <a href="/attendance/report"
+                <router-link to="/attendance/report"
                     :class="$route.path === '/attendance/report' ?
                         'dropdown-item  active' :
                         'dropdown-item '">
 
                     <p>{{ trans('lang.Attendance And Leave report') }}</p>
-                </a>
+                </router-link>
 
 
 
             </div>
         </li>
         <li class="nav-item">
-            <a href="/attendance"
+            <router-link to="/attendance"
                 :class="$route.path === '/attendance' ?
                     'nav-link  active' :
                     'nav-link '">
                 <p>
                     {{ trans('lang.Attendance And Leave') }}
                 </p>
-            </a>
+            </router-link>
 
         </li>
 
@@ -153,13 +153,13 @@
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
         <li class="nav-item">
-            <a href="/mixins"
+            <router-link to="/mixins"
                 :class="$route.path === '/mixins' ?
                     'nav-link  active' :
                     'nav-link '">
                 <i class="nav-icon fas fa-cog"></i>
 
-            </a>
+            </router-link>
 
         </li>
         <li class="nav-item dropdown top-dbdn">
@@ -220,10 +220,10 @@
     <aside class="main-sidebar sidebar-light-olive elevation-4" style="display: none"
         v-show="$route.path==='/'?false:true">
         <!-- Brand Logo -->
-        <a href="/mixins" class="brand-link">
+        <router-link to="/mixins" class="brand-link">
             <img src="{{ asset($codies->mixins_logo) }}" alt="Gusto" class="brand-image img-circle ">
             <span class="brand-text font-weight-light">{{ $codies->mixins_name }}</span>
-        </a>
+        </router-link>
         <!-- Sidebar -->
         <div class="sidebar">
             <!-- Sidebar user panel (optional) -->
@@ -234,7 +234,7 @@
                 </div>
                 <div class="info">
 
-                    <a href="/bill" class="d-block userName"></a>
+                    <router-link to="/bill" class="d-block userName"></router-link>
                 </div>
             </div>
 
@@ -283,111 +283,111 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <router-link to="#" class="nav-link">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 {{ trans('lang.Bills') }}
                                 <i class="fas fa-angle-left right"></i>
                             </p>
-                        </a>
+                        </router-link>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/bills"
+                                <router-link to="/bills"
                                     :class="$route.path === '/bills' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Bills') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/process"
+                                <router-link to="/process"
                                     :class="$route.path === '/return' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Manage Exit bill') }}</p>
-                                </a>
+                                </router-link>
                             </li>
 
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <router-link to="#" class="nav-link">
                             <i class="nav-icon fas fa-list-alt"></i>
                             <p>
                                 {{ trans('lang.Types') }}
                                 <i class="fas fa-angle-left right"></i>
                             </p>
-                        </a>
+                        </router-link>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/mainTypes"
+                                <router-link to="/mainTypes"
                                     :class="$route.path === '/mainTypes' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Categories') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/units"
+                                <router-link to="/units"
                                     :class="$route.path === '/units' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Units') }}</p>
-                                </a>
+                                </router-link>
                             </li>
 
                             <li class="nav-item">
-                                <a href="/types" id="types"
+                                <router-link to="/types" id="types"
                                     :class="$route.path === '/types' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Types') }}</p>
-                                </a>
+                                </router-link>
                             </li>
 
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <router-link to="#" class="nav-link">
                             <i class="nav-icon fas fa-file"></i>
                             <p>
                                 {{ trans('lang.Reports') }}
                                 <i class="fas fa-angle-left right"></i>
 
                             </p>
-                        </a>
+                        </router-link>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/bills/report/daily"
+                                <router-link to="/bills/report/daily"
                                     :class="$route.path === '/bills/report/daily' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Today Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/bills/report/monthly"
+                                <router-link to="/bills/report/monthly"
                                     :class="$route.path === '/bills/report/monthly' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Monthly Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/bills/report"
+                                <router-link to="/bills/report"
                                     :class="$route.path === '/bills/report' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Period Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a href="/Fbills"
@@ -409,58 +409,58 @@
                             </li>
                             @if ($codies->country === 2)
                                 <li class="nav-item">
-                                    <a href="/ProcessReport"
+                                    <router-link to="/ProcessReport"
                                         :class="$route.path === '/ProcessReport' ?
                                             'nav-link  active' :
                                             'nav-link '">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>{{ trans('lang.Process Bills Report') }}</p>
-                                    </a>
+                                    </router-link>
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <a href="/customers/report"
+                                <router-link to="/customers/report"
                                     :class="$route.path === '/customers/report' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Customers Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/search"
+                                <router-link to="/search"
                                     :class="$route.path === '/search' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Search Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
 
                             <li class="nav-item">
-                                <a href="/shiftReport"
+                                <router-link to="/shiftReport"
                                     :class="$route.path === '/shiftReport' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Shift Report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="/attendance/report"
+                                <router-link to="/attendance/report"
                                     :class="$route.path === '/attendance/report' ?
                                         'nav-link  active' :
                                         'nav-link '">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>{{ trans('lang.Attendance And Leave report') }}</p>
-                                </a>
+                                </router-link>
                             </li>
 
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/offers"
+                        <router-link to="/offers"
                             :class="$route.path === '/offers' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -468,12 +468,12 @@
                             <p>
                                 {{ trans('lang.Offers') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
 
                     <li class="nav-item">
-                        <a href="/stocks"
+                        <router-link to="/stocks"
                             :class="$route.path === '/stocks' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -481,11 +481,11 @@
                             <p>
                                 {{ trans('lang.Manage Stock') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/gusto/stocks"
+                        <router-link to="/gusto/stocks"
                             :class="$route.path === '/gusto/stocks' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -493,10 +493,10 @@
                             <p>
                                 {{ trans('lang.Create Order') }}
                             </p>
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a href="/shift"
+                        <router-link to="/shift"
                             :class="$route.path === '/shift' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -504,11 +504,11 @@
                             <p>
                                 {{ trans('lang.shifts') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/cash"
+                        <router-link to="/cash"
                             :class="$route.path === '/cash' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -516,11 +516,11 @@
                             <p>
                                 {{ trans('lang.Cash') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item d-none">
-                        <a href="/suppliers"
+                         <router-link to="/suppliers"
                             :class="$route.path === '/suppliers' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -528,11 +528,11 @@
                             <p>
                                 {{ trans('lang.Suppliers') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/expenses"
+                        <router-link to="/expenses"
                             :class="$route.path === '/expenses' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -540,11 +540,11 @@
                             <p>
                                 {{ trans('lang.Expenses') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/customers"
+                        <router-link to="/customers"
                             :class="$route.path === '/customers' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -552,11 +552,11 @@
                             <p>
                                 {{ trans('lang.Customers') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/workers"
+                        <router-link to="/workers"
                             :class="$route.path === '/workers' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -564,11 +564,11 @@
                             <p>
                                 {{ trans('lang.Workers') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/users"
+                        <router-link to="/users"
                             :class="$route.path === '/users' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -576,12 +576,12 @@
                             <p>
                                 {{ trans('lang.Users') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
 
                     <li class="nav-item">
-                        <a href="/barcode"
+                        <router-link to="/barcode"
                             :class="$route.path === '/barcode' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -589,11 +589,11 @@
                             <p>
                                 {{ trans('lang.Barcode Settings') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/attendance"
+                        <router-link to="/attendance"
                             :class="$route.path === '/attendance' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -601,11 +601,11 @@
                             <p>
                                 {{ trans('lang.Attendance And Leave') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="/mixins"
+                        <router-link to="/mixins"
                             :class="$route.path === '/mixins' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -613,11 +613,11 @@
                             <p>
                                 {{ trans('lang.Settings') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('typesToExcel') }}"
+                        <router-link to="{{ route('typesToExcel') }}"
                             :class="$route.path === '/typesToExcel' ?
                                 'nav-link  active' :
                                 'nav-link '">
@@ -625,11 +625,11 @@
                             <p>
                                 {{ trans('lang.Print') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item bg-danger border-1">
-                        <a href="{{ route('trash') }}"
+                        <router-link to="{{ route('trash') }}"
                             :class="$route.path === '/trash' ?
                                 'nav-link  active ' :
                                 'nav-link '">
@@ -637,7 +637,7 @@
                             <p>
                                 {{ trans('lang.Trash') }}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                 </ul>
