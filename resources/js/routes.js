@@ -106,7 +106,7 @@ export const routes = [
     //Tables
     { path: "/create/table", component: createTable, name: "create-table" },
     { path: "/tables", component: tables, name: "tables" },
-    { path: "/edit/stock/:id", component: editTable, name: "edit-table" },
+    { path: "/edit/table/:id", component: editTable, name: "edit-table" },
     //shift
     { path: "/shift", component: shift, name: "shift" },
     { path: "/attendance", component: attendance, name: "attendance" },

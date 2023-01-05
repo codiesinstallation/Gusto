@@ -519,7 +519,7 @@
                         </a>
 
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a href="/suppliers"
                             :class="$route.path === '/suppliers' ?
                                 'nav-link  active' :

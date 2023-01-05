@@ -105,7 +105,7 @@
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">
-                                                    سعر الشراء</span
+                                                    سعر التكلفة</span
                                                 >
                                             </div>
                                             <input
@@ -114,9 +114,9 @@
                                                     type.type_purchases_price
                                                 "
                                                 aria-describedby="basic-addon1"
-                                                aria-label="سعر الشراء"
+                                                aria-label="سعر التكلفة"
                                                 class="form-control"
-                                                placeholder="سعر الشراء"
+                                                placeholder="سعر التكلفة"
                                                 type="number"
                                             />
                                             <div class="input-group-prepend">

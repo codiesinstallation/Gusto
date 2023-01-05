@@ -202,7 +202,7 @@
                     </h5>
                 </router-link>
             </div>
-            <div class="col-md-2 col-sm-4">
+            <div class="col-md-2 col-sm-4 d-none">
                 <router-link
                     class="card text-center p-1 w-100"
                     style="text-decoration: none; text-align: center"

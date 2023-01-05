@@ -5,12 +5,12 @@
                 <div class="card mb-4">
                     <form @keydown.enter.prevent @submit.prevent="update">
                         <div
-                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                            class="card-header d-flex justify-content-between"
                         >
                             <h6 class="m-0 font-weight-bold text-primary">
                                 تحديث المخزون
                             </h6>
-                            <button class="btn btn-primary" type="submit">
+                            <button class="btn btn-primary " type="submit">
                                 حفظ
                             </button>
                         </div>
