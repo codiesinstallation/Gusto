@@ -84,7 +84,7 @@
 
 
 
-                @if ($codies->country === 2)
+                @if ($codies->country==2)
                     <router-link to="/ProcessReport"
                         :class="$route.path === '/ProcessReport' ?
                             'dropdown-item  active' :
@@ -407,7 +407,7 @@
                                     <p>{{ trans('lang.Types Report') }}</p>
                                 </a>
                             </li>
-                            @if ($codies->country === 2)
+                            @if ($codies->country==2)
                                 <li class="nav-item">
                                     <router-link to="/ProcessReport"
                                         :class="$route.path === '/ProcessReport' ?

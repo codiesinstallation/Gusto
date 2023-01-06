@@ -283,8 +283,8 @@
                                                     </tr>
                                                     <tr
                                                         v-if="
-                                                            $root.$data
-                                                                        .codiescountry == 2
+                                                            $root.$data.codies
+                                                                .country == 2
                                                         "
                                                     >
                                                         <th
@@ -308,8 +308,8 @@
                                                     </tr>
                                                     <tr
                                                         v-if="
-                                                            $root.$data
-                                                                        .codiescountry == 2
+                                                            $root.$data.codies
+                                                                .country == 2
                                                         "
                                                     >
                                                         <th
@@ -333,8 +333,8 @@
                                                     </tr>
                                                     <tr
                                                         v-if="
-                                                            $root.$data
-                                                                        .codiescountry == 2
+                                                            $root.$data.codies
+                                                                .country == 2
                                                         "
                                                     >
                                                         <th
@@ -359,8 +359,8 @@
                                                     </tr>
                                                     <tr
                                                         v-if="
-                                                            $root.$data
-                                                                        .codiescountry == 2
+                                                            $root.$data.codies
+                                                                .country == 2
                                                         "
                                                     >
                                                         <th

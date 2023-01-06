@@ -754,7 +754,7 @@
                                         mixins.mixins_name != null &&
                                         !mixins.mixins_name.isEmpty &&
                                         mixins.contruct_no != null &&
-                                        mixins.country === 2
+                                        !mixins.country
                                     "
                                     class="text-center"
                                 >

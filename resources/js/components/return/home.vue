@@ -1,12 +1,8 @@
 <template>
     <div>
-        <returnR
-            v-if="mixins.country == 1"
-        ></returnR>
+        <returnR v-if="mixins.country == 1"></returnR>
 
-        <processR
-            v-else
-        ></processR>
+        <processR v-else></processR>
     </div>
 </template>
 
@@ -15,7 +11,7 @@ import returnR from "./index.vue";
 import processR from "./process.vue";
 
 export default {
-    components: { returnR,  processR,  },
+    components: { returnR, processR },
 
     async created() {
         if (!User.loggedIn()) {

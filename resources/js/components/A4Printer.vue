@@ -326,13 +326,7 @@
                                             <tr class="text-center">
                                                 <th>اسم الصنف</th>
                                                 <th>العدد</th>
-                                                <th>
-                                                    {{
-                                                        mixins.codies_type
-                                                            ? "الوحدة"
-                                                            : "العملية"
-                                                    }}
-                                                </th>
+                                                <th>العملية</th>
                                                 <th>السعر</th>
                                                 <th>الخصم</th>
 
@@ -638,7 +632,7 @@
                                         mixins.mixins_name != null &&
                                         !mixins.mixins_name.isEmpty &&
                                         mixins.contruct_no != null &&
-                                        mixins.country === 2
+                                        mixins.country == 2
                                     "
                                     class="text-center"
                                 >
@@ -648,7 +642,6 @@
                                 <div
                                     v-if="bill.bill_notes"
                                     class="footer text-center text-wrap"
-
                                 >
                                     {{ bill.bill_notes }}
                                 </div>

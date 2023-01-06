@@ -245,7 +245,6 @@
                                             <th>العملية</th>
                                             <th>السعر</th>
                                             <th>الخصم</th>
-
                                             <th>الاجمالي</th>
                                         </tr>
                                         <tr
@@ -447,7 +446,7 @@
                                     mixins.mixins_name != null &&
                                     !mixins.mixins_name.isEmpty &&
                                     mixins.contruct_no != null &&
-                                    mixins.country === 2
+                                    mixins.country == 2
                                 "
                                 class="text-center"
                             >

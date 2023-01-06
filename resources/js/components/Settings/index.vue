@@ -1,15 +1,22 @@
 <template>
     <div class="col-12">
         <div v-if="user.settings">
-            <form @keydown.enter.prevent enctype="multipart/form-data" @submit.prevent="saveChanges">
+            <form
+                @keydown.enter.prevent
+                enctype="multipart/form-data"
+                @submit.prevent="saveChanges"
+            >
                 <div class="card">
-                    <div
-                        class="card-header"
-                    >
-                        <h6 class="font-weight-bold text-primary float-right d-inline">
+                    <div class="card-header">
+                        <h6
+                            class="font-weight-bold text-primary float-right d-inline"
+                        >
                             الاعدادات الأساسية
                         </h6>
-                        <button type="submit" class="btn btn-primary float-left">
+                        <button
+                            type="submit"
+                            class="btn btn-primary float-left"
+                        >
                             حفظ
                         </button>
                     </div>
@@ -278,7 +285,6 @@
                                 </div>
 
                                 <div class="card-body">
-
                                     <div class="form-group">
                                         <div class="form-group">
                                             <label> تعدد(jsPrint)</label>
@@ -360,9 +366,7 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <div
-                                        class="form-group"
-                                    >
+                                    <div class="form-group">
                                         <div
                                             class="custom-control custom-switch"
                                         >
@@ -396,9 +400,7 @@
                                             <option value="5">5</option>
                                         </select>
                                     </div>
-                                    <div
-                                        class="form-group"
-                                    >
+                                    <div class="form-group">
                                         <div
                                             class="custom-control custom-switch"
                                         >
@@ -415,9 +417,7 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div
-                                        class="form-group"
-                                    >
+                                    <div class="form-group">
                                         <label> نوع الطابعة </label>
                                         <select
                                             class="form-select"
@@ -458,7 +458,8 @@
                                             <label
                                                 class="custom-control-label"
                                                 for="pretty"
-                                                >عرض الاصناف الرئيسية كقائمة</label
+                                                >عرض الاصناف الرئيسية
+                                                كقائمة</label
                                             >
                                         </div>
                                     </div>
@@ -606,7 +607,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -658,7 +658,6 @@ export default {
         };
     },
     methods: {
-
         onFileSelected(event) {
             let file = event.target.files[0];
             if (file.size > 1048770) {

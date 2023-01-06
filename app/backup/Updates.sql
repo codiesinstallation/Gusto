@@ -246,3 +246,6 @@ ADD
 ALTER TABLE `codies`.`users`
 ADD
     COLUMN `change_type_in_kitchen` TINYINT(1) NULL DEFAULT 0 AFTER `pin_code`;
+-- Host
+ALTER TABLE `codies`.`mixins_info`
+CHANGE COLUMN `country` `country` TINYINT(1) NULL DEFAULT 0 ;

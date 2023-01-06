@@ -743,12 +743,6 @@
                                         <th style="width: 10%">
                                             {{ __("Total") }}
                                         </th>
-                                        <th
-                                            style="width: 10%"
-                                            v-show="!mixins.bill_with_main_type"
-                                        >
-                                            {{ __("Discount Percent") }}
-                                        </th>
                                     </tr>
                                 </thead>
 
@@ -1244,7 +1238,7 @@
                 <Printer
                     :bill="bill"
                     :qr="qr"
-                    v-if="mixins.printer_type === 1"
+                    v-if="mixins.printer_type == 1"
                 />
                 <A4Printer :bill="bill" :qr="qr" v-else />
                 <kitchen :bill="tableprint" />
@@ -1557,7 +1551,7 @@ export default {
                     if (this.bill.bill_total > 0) {
                         this.bill.billTotal = new Tafgeet(
                             this.bill.bill_total,
-                            this.mixins.country === 1 ? "EGP" : "SAR"
+                            this.mixins.country == 1 ? "EGP" : "SAR"
                         ).parse();
                     }
                     if (this.bill != null) {
